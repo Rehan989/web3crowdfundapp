@@ -1,59 +1,156 @@
+# Decentralized Crowdfunding Platform
 
-![tw-banner](https://github.com/thirdweb-example/next-starter/assets/57885104/20c8ce3b-4e55-4f10-ae03-2fe4743a5ee8)
+Full-stack crowdfunding platform built with Next.js and Solidity smart contracts, deployed on Ethereum Sepolia testnet using thirdweb.
 
-# thirdweb-next-starter
+## 🌟 Features
 
-Starter template to build an onchain react native app with [thirdweb](https://thirdweb.com/) and [next](https://nextjs.org/).
+- Create and manage crowdfunding campaigns
+- Multi-wallet support (MetaMask, WalletConnect, Coinbase Wallet)
+- Tiered reward system
+- Automated refund system
+- Responsive Next.js frontend
+- Real-time campaign status updates
+- Campaign deadline extension
+- Pause/unpause functionality
 
-## Installation
+## 🔧 Tech Stack
 
-Install the template using [thirdweb create](https://portal.thirdweb.com/cli/create)
+### Frontend
+- Next.js
+- TypeScript
+- thirdweb React SDK
+- Tailwind CSS
+- React Query
 
-```bash
-  npx thirdweb create app --next
+### Backend
+- Solidity ^0.8.0
+- thirdweb SDK
+- Ethereum Sepolia Testnet
+
+## 📦 Project Structure
+
+```
+├── contracts/
+│   ├── CrowdfundingFactory.sol
+│   └── Crowdfunding.sol
+├── frontend/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   └── utils/
+└── scripts/
 ```
 
-## Environment Variables
+## 🚀 Deployment
 
-To run this project, you will need to add the following environment variables to your .env file:
-
-`CLIENT_ID`
-
-To learn how to create a client ID, refer to the [client documentation](https://portal.thirdweb.com/typescript/v5/client). 
-
-## Run locally
-
-Install dependencies
-
-```bash
-yarn
+### Smart Contracts (Sepolia)
+```
+Factory Contract: [Your Factory Contract Address]
 ```
 
-Start development server
-
+### Frontend
 ```bash
-yarn dev
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-Create a production build
+## 🔗 Supported Wallets
 
+- MetaMask
+- Phantom
+- WalletConnect
+- Coinbase Wallet
+- Rainbow Wallet
+- See lisk of wallets accepted here: [here][https://portal.thirdweb.com/wallet-sdk/v2/wallets]
+
+## 📹 Demo
+
+Watch the demo video [here][Add your video link].
+
+## 🛠 Local Development
+
+1. Clone repository
 ```bash
-yarn build
+git clone [Your Repository URL]
 ```
 
-Preview the production build
-
+2. Install dependencies
 ```bash
-yarn start
+# Install contract dependencies
+cd contracts
+npm install
+
+# Install frontend dependencies
+cd frontend
+npm install
 ```
 
-## Resources
+3. Environment setup
+```bash
+cp .env.example .env.local
+# Add environment variables
+```
 
-- [Documentation](https://portal.thirdweb.com/typescript/v5)
-- [Templates](https://thirdweb.com/templates)
-- [YouTube](https://www.youtube.com/c/thirdweb)
-- [Blog](https://blog.thirdweb.com)
+4. Start development server
+```bash
+npm run dev
+```
 
-## Need help?
+## 🧪 Testing
 
-For help or feedback, please [visit our support site](https://thirdweb.com/support)
+```bash
+# Smart contract tests
+npx hardhat test
+
+# Frontend tests
+npm run test
+```
+
+## 📝 Contract Integration
+
+```javascript
+import { useContract, useContractWrite } from "@thirdweb-dev/react";
+
+// Use contract hook
+const { contract } = useContract("YOUR_CONTRACT_ADDRESS");
+
+// Create campaign
+const { mutate: createCampaign, isLoading } = useContractWrite(
+  contract,
+  "createCampaign"
+);
+```
+
+## 🔐 Security Features
+
+- Multi-signature wallet support
+- Contract pausability
+- Access control modifiers
+- Secure fund management
+- Input validation
+
+## 📜 License
+
+MIT License. See [LICENSE](LICENSE) for more information.
+
+## 🤝 Contributing
+
+1. Fork repository
+2. Create feature branch
+3. Commit changes
+4. Push to branch
+5. Submit Pull Request
+
+## ✍️ Author
+
+[Your Name]
+
+## 📧 Contact
+
+[Your Contact Information]
