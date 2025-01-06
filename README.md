@@ -77,14 +77,11 @@ Watch the demo video [here][Add your video link].
 
 1. Clone repository
 ```bash
-git clone [Your Repository URL]
+git clone https://github.com/Rehan989/web3crowdfundapp
 ```
 
 2. Install dependencies
 ```bash
-# Install contract dependencies
-cd contracts
-npm install
 
 # Install frontend dependencies
 cd frontend
@@ -102,15 +99,6 @@ cp .env.example .env.local
 npm run dev
 ```
 
-## 🧪 Testing
-
-```bash
-# Smart contract tests
-npx hardhat test
-
-# Frontend tests
-npm run test
-```
 
 ## 📝 Contract Integration
 
@@ -149,8 +137,8 @@ MIT License. See [LICENSE](LICENSE) for more information.
 
 ## ✍️ Author
 
-[Your Name]
+Rehan Makrani
 
 ## 📧 Contact
 
-[Your Contact Information]
+rehanmakrani727@gmail.com
